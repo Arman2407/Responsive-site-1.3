@@ -46,54 +46,85 @@ body {
   margin: 0px;
   min-width: 320px;
 }
+@media (min-width: 1120px) {
+  body {
+    background: #f8f8f8;
+  }
+}
 
-.menuback {
+.menu-select {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 88px;
   border-bottom: 1px solid #d9fff5;
 }
 @media (min-width: 768px) {
-  .menuback {
-    justify-content: space-between;
-    padding: 0 24px;
+  .menu-select {
+    padding: 0 8px;
   }
 }
 
-.menuback__menu {
+.select-list__first,
+.select-list__second {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.select-list__first > li {
+  padding-left: 16px;
+}
+
+.select-list__first > li > button {
   background: #ffffff;
   border: white;
   padding: 0px;
 }
 
-.menuback__line-first,
-.menuback__line-second {
-  border-left: 2px solid #eaeaea;
+.select-list__second > li {
+  padding-right: 16px;
+}
+
+.select-list__second > li > button {
+  background: #ffffff;
+  border: white;
+  padding: 0px;
+}
+
+.list-second-repair::before {
+  content: "";
+  width: 2px;
   height: 32px;
-}
-
-.menuback__line-first {
-  display: none;
+  border-radius: 1px;
+  background-color: #eaeaea;
+  display: inline-block;
+  margin-right: 16px;
 }
 @media (min-width: 768px) {
-  .menuback__line-first {
-    display: block;
+  .list-first-logo::before {
+    content: "";
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: #eaeaea;
+    display: inline-block;
+    vertical-align: super;
+    margin-right: 16px;
   }
 }
 
-.menuback__contacts {
+.list-second-call,
+.list-second-chat,
+.list-second-profile {
   display: none;
 }
 @media (min-width: 768px) {
-  .menuback__contacts {
+  .list-second-call,
+  .list-second-chat,
+  .list-second-profile {
     display: block;
-  }
-}
-
-@media (min-width: 768px) {
-  .call {
-    margin-left: 250px;
   }
 }
 
@@ -103,7 +134,7 @@ body {
   }
 }
 
-.main {
+.main-services {
   background: #f8f8f8;
 }
 
@@ -111,8 +142,8 @@ body {
   .services {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 42px;
+    align-items: center;
+    margin-top: 42px;
   }
 }
 
@@ -137,55 +168,63 @@ body {
 }
 @media (min-width: 1120px) {
   .service__group {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
-.service__border {
-  border-right: 4px solid #41f6d7;
+.service__group::before {
+  content: "";
+  width: 4px;
   height: 40px;
+  background-color: #41f6d7;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-@media (min-width: 1120px) {
-  .service__border {
-    border-radius: 2px;
-    border-right: 3px solid #41f6d7;
-  }
+
+.service__repair,
+.service__chekstatus {
+  display: flex;
+  align-items: center;
+  background: #f8f8f8;
+  border: 0;
+  padding: 0;
 }
 
-.h1-service {
+.service-title {
   letter-spacing: -0.6px;
   line-height: 40px;
   padding-left: 12px;
 }
 
 @media (min-width: 768px) {
-  .h1-service {
+  .service-title {
     padding-left: 20px;
   }
 }
 
 @media (min-width: 1120px) {
-  .h1-service {
+  .service-title {
     margin: 0px;
-    padding-left: 30px;
+    padding-left: 28px;
   }
 }
 
-.service__text1,
-.service__text2 {
+.service__text-first,
+.service__text-second {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
   font-weight: 500;
   font-style: normal;
   letter-spacing: -0.2px;
+  margin-right: 8px;
 }
 
 .list {
   display: flex;
   overflow: auto;
   padding-left: 16px;
-  margin-top: 4px;
   height: 40px;
+  list-style: none;
 }
 @media (min-width: 1120px) {
   .list {
@@ -195,15 +234,23 @@ body {
 }
 
 .list__item {
-  text-decoration: none;
+  font-family: "TT Lakes", sans-serif;
   white-space: pre;
   text-align: center;
-  padding: 8px 16px;
-  margin-right: 20px;
+  background: #f8f8f8;
+  border: 0;
+  padding: 6px 14px;
+  margin-right: 6px;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #7e7e82;
+}
+
+@media (min-width: 1120px) {
+  .list__item {
+    margin-right: 25px;
+  }
 }
 
 .list__item:focus {
@@ -223,7 +270,6 @@ body {
 @media (min-width: 768px) {
   .text-about {
     margin-right: 48px;
-    margin-top: 32px;
     margin-left: 24px;
   }
 }
@@ -237,12 +283,12 @@ body {
 }
 
 @media (min-width: 320px) {
-  .about__dell-2 {
+  .about__dell-second {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .about__dell-2 {
+  .about__dell-second {
     display: block;
   }
 }
@@ -261,27 +307,16 @@ body {
 
 .read-more {
   display: flex;
+  align-items: center;
   margin-left: 8px;
   border: 0px;
   padding: 0px;
   background: #f8f8f8;
 }
 
-.read-arrows {
-  display: flex;
-  flex-direction: column;
-  padding-top: 4px;
-}
-
-.read-arrow {
-  border: solid #86fddd;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 2px;
-  transform: rotate(45deg);
-}
-
 .read-more-text {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
   margin: 0px 0px 0px 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
@@ -292,12 +327,18 @@ body {
 @media (min-width: 768px) {
   .content {
     display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1120px) {
+  .content {
+    align-items: unset;
   }
 }
 
 @media (min-width: 768px) {
   .content-picture {
-    margin-top: 22px;
+    margin-top: 14px;
     margin-right: 16px;
     border-radius: 6px;
   }
