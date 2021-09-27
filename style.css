@@ -65,35 +65,32 @@ body {
   }
 }
 
-.select-list__first,
-.select-list__second {
+.select-list__burger,
+.select-list__contacts {
   list-style-type: none;
   display: flex;
   align-items: center;
   padding-left: 0px;
 }
 
-.select-list__first > li {
-  padding-left: 16px;
-}
-
-.select-list__first > li > button {
+.select-list__burger > button {
   background: #ffffff;
   border: white;
   padding: 0px;
+  margin-left: 16px;
 }
 
-.select-list__second > li {
+.select-list__contacts > li {
   padding-right: 16px;
 }
 
-.select-list__second > li > button {
+.select-list__contacts > li > button {
   background: #ffffff;
   border: white;
   padding: 0px;
 }
 
-.list-second-repair::before {
+.list-repair::before {
   content: "";
   width: 2px;
   height: 32px;
@@ -103,7 +100,7 @@ body {
   margin-right: 16px;
 }
 @media (min-width: 768px) {
-  .list-first-logo::before {
+  .menu-select__logo::before {
     content: "";
     width: 2px;
     height: 32px;
@@ -115,15 +112,15 @@ body {
   }
 }
 
-.list-second-call,
-.list-second-chat,
-.list-second-profile {
+.list-call,
+.list-chat,
+.list-profile {
   display: none;
 }
 @media (min-width: 768px) {
-  .list-second-call,
-  .list-second-chat,
-  .list-second-profile {
+  .list-call,
+  .list-chat,
+  .list-profile {
     display: block;
   }
 }
@@ -209,8 +206,8 @@ body {
   }
 }
 
-.service__text-first,
-.service__text-second {
+.service__text-repair,
+.service__text-chekstatus {
   font-family: "TT Lakes", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -283,12 +280,12 @@ body {
 }
 
 @media (min-width: 320px) {
-  .about__dell-second {
+  .about__dell-more {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .about__dell-second {
+  .about__dell-more {
     display: block;
   }
 }
