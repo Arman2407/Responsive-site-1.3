@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
+    url("TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Bold.woff") format("woff"),
+    url("TTLakes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Medium.eot");
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"),
+    url("TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Medium.woff") format("woff"),
+    url("TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"),
+    url("TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Regular.woff") format("woff"),
+    url("TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  margin: 0px;
+  min-width: 320px;
+  background: #f2f2f2;
+}
+
+.repair {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+  height: 80px;
+}
+
+.repair__text {
+  margin-left: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7e7e82;
+}
+@media (min-width: 768px) {
+  .repair__text {
+    margin-left: 24px;
+  }
+}
+
+.brands__container {
+  background: #f2f2f2;
+  margin-top: 16px;
+}
+
+.swiper-container {
+  background: #f2f2f2;
+}
+
+.swiper-wrapper {
+  list-style: none;
+  padding: 0px;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    margin-left: 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    margin-left: 32px;
+  }
+}
+
+.swiper-slide {
+  width: 240px;
+}
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: 224px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-slide {
+    width: 240px;
+    margin-bottom: 16px;
+    margin-right: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .swiper-slide:nth-child(n + 7):nth-child(-n + 8) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .hidden__tablet-slide {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-slide:nth-child(n + 9) {
+    display: none;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: -webkit-fill-available;
+  height: 72px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.swipe__pagination {
+  position: unset;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .swipe__pagination {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #dddddd;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}
+
+.show__more,
+.hide__all {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  border: 0px;
+  padding: 0px;
+  background: #f2f2f2;
+  font-family: "TT Lakes", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  margin: 0px 0px 0px 16px;
+}
+@media (min-width: 320px) {
+  .show__more {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) {
+  .hide__all {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .show__more {
+    display: flex;
+    margin-left: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide__all {
+    display: none;
+    margin-left: 32px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .show__more {
+    margin-left: 39px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .hide__all {
+    margin-left: 39px;
+  }
+}
+
+.read__arrows {
+  margin-right: 16px;
+}
